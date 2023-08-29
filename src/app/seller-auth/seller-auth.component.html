@@ -1,0 +1,28 @@
+<h1 style="text-align: center;">Seller Signup</h1>
+<form (ngSubmit)="onSubmit(seller)" #seller="ngForm">
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" required ngModel>
+    </div>
+    <div class="mb-3">
+        <label for="rating" class="form-label">Rating:</label>
+        <input type="number" class="form-control" id="rating" placeholder="Enter rating" name="rating" required ngModel>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <input type="number" class="form-control" id="price" placeholder="Enter price" name="price" required ngModel>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image:</label>
+        <input type="text" class="form-control" id="image" placeholder="Enter image url" name="image" required ngModel>
+      </div>
+      <div class="mb-3">
+        <label for="brand" class="form-label">Brand:</label>
+        <input type="text" class="form-control" id="brand" placeholder="Enter brand" name="brand" required ngModel>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

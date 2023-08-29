@@ -1,0 +1,27 @@
+.navbar{
+  height: 80px;
+  width: 100%;
+}
+.title{
+  padding: 6px;
+  font-size: 26px;
+}
+.title:hover{
+  color:aqua;
+}
+.items li{
+  margin-right: 36px;
+  font-size: 26px;
+}
+form input{
+  width: 460px;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+form button{
+  margin-left: 16px;
+  padding: 6px;
+  width: 96px;
+  color:white;
+}

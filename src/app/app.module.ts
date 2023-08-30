@@ -10,13 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { SellerhomeComponent } from './sellerhome/sellerhome.component'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SellerhomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule , 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

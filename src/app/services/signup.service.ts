@@ -6,7 +6,6 @@ import { signup } from 'src/signup';
   providedIn: 'root'
 })
 export class SignupService {
-
   constructor(private http : HttpClient) { }
   postsignup(data : signup){
     return this.http.post('http://localhost:8000/seller', data);

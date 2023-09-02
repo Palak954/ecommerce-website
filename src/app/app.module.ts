@@ -11,7 +11,8 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { SellerhomeComponent } from './sellerhome/sellerhome.component'
+import { SellerhomeComponent } from './sellerhome/sellerhome.component';
+import { SellerPasswordValidationDirective } from './directive/seller-password-validation.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { SellerhomeComponent } from './sellerhome/sellerhome.component'
     HomeComponent,
     SellerAuthComponent,
     PageNotFoundComponent,
-    SellerhomeComponent
+    SellerhomeComponent,
+    SellerPasswordValidationDirective
   ],
   imports: [
     BrowserModule,

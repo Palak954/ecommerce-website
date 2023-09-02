@@ -25,6 +25,7 @@ export class SellerAuthComponent implements OnInit {
   }
   else{
     alert('invalid form');
+    this.route.navigate(["/seller-auth"])
   }
     
   }

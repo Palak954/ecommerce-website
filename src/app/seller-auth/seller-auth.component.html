@@ -2,22 +2,26 @@
 <form (ngSubmit)="onSubmit(seller.value)" #seller="ngForm">
     <div class="mb-3 mt-3">
       <label for="name" class="form-label">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required ngModel>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required ngModel #name="ngModel">
+      <p *ngIf="name.errors?.['required'] && name.touched">name field is required</p>
     </div>
     <div class="mb-3 mt-2">
       <label for="email" class="form-label">Email:</label>
-      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required ngModel>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required ngModel #email="ngModel">
+      <p *ngIf="email.errors?.['required'] && email.touched">email field is required</p>
+      <p *ngIf="email.errors?.['email']">email field is not valid</p>
     </div>
     <div class="mb-3 mt-2">
       <label for="password" class="form-label">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required ngModel #password>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required ngModel #password="ngModel">
+      <p *ngIf="password.errors?.['required'] && password.touched">password field is required</p>
     </div>
     <div class="mb-3 mt-2">
       <label for="confirmpassword" class="form-label">Confirm Password:</label>
-      <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Password" name="comfirmpassword" required ngModel #confirmpassword>
+      <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Password" name="comfirmpassword" required ngModel #confirmpassword="ngModel" appSellerPasswordValidation="password">
+      <p *ngIf="confirmpassword.touched && confirmpassword.errors?.['notEqual']">Passwords are not Matching</p>
     </div>
-    <p *ngIf="password.value != confirmpassword.value && confirmpassword.value">Passwords are not Matching</p>
-    <button type="submit" class="btn btn-primary">SignUp</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!seller.valid">SignUp</button>
   </form>
 
   <!-- <div class="mb-3">

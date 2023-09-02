@@ -20,6 +20,13 @@
       "password": "fghj",
       "comfirmpassword": "fghj",
       "id": 3
+    },
+    {
+      "name": "Palak",
+      "email": "palakgoel46321@gmail.com",
+      "password": "fg",
+      "comfirmpassword": "fg",
+      "id": 4
     }
   ]
 }

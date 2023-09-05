@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { SignupService } from '../services/signup.service';
 import { signup } from 'src/signup';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
+import { Login } from '../login';
 
 @Component({
   selector: 'app-seller-auth',
@@ -11,22 +13,29 @@ import { Router } from '@angular/router';
 })
 export class SellerAuthComponent implements OnInit {
   @ViewChild("seller") sellerform : NgForm;
-  constructor(private signupService : SignupService , private route : Router) { }
-
+  constructor(private signupService : SignupService , private route : Router , private loginService : LoginService) { }
+  signIn : boolean = true;
   ngOnInit(): void {
+    this.signupService.reloadSeller();
   }
-  onSubmit(value : signup){
+  signupSeller(value : signup){
     if(this.sellerform.valid == true){
     alert("form submitted");
-    this.signupService.postsignup(value).subscribe((data)=>{
-      console.log(data);
-    });
-    this.route.navigate(["/seller-home"]);
+    this.signupService.postsignup(value)
   }
-  else{
-    alert('invalid form');
-    this.route.navigate(["/seller-auth"])
+}
+  signupLogin(value: Login){
+    if(this.sellerform.valid == true){
+      alert("form submitted");
+      this.loginService.postLogin(value).subscribe((data)=>{
+        console.log(data);
+      })
+    }
   }
-    
+  signup(){
+    this.signIn = false;
+  }
+  login(){
+    this.signIn = true;
   }
 }

@@ -27,6 +27,13 @@
       "password": "p123456",
       "comfirmpassword": "p123456",
       "id": 4
+    },
+    {
+      "name": "palak",
+      "email": "palakgoel46321@gmail.com",
+      "password": "p123456",
+      "comfirmpassword": "p123456",
+      "id": 5
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from '../services/signup.service';
+import { SignupService } from '../services/sellersignup.service';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,14 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private signupService : SignupService , private route : Router) { }
-
+  menutype : string = "default";
+  constructor(private route : Router) { }
+  sellerName : string = "";
   ngOnInit(): void {
+    this.route.events.subscribe((data:any)=>{
+      if(data.url){
+      if(localStorage.getItem("seller") && data.url.includes("seller")){
+      this.menutype = "seller";
+      // console.log(localStorage.getItem("seller"));
+      }
+      else
+      this.menutype = "default";
+      }
+    })
   }
   logout(){
-    this.signupService.isLoggedIn.next(false);
-    localStorage.clear();
-    this.route.navigate(["/home"]);
+    localStorage.removeItem("seller");
+    this.route.navigate(["/"]);
   }
 }

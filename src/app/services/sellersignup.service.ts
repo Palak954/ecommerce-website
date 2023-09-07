@@ -24,7 +24,4 @@ export class SignupService {
       this.route.navigate(["/seller-home"]);
     }
   }
-  getsignup(){
-    return this.http.get('http://localhost:8000/seller');
-  }
 }

@@ -1,6 +1,7 @@
 <div class="signup" *ngIf="signIn">
 <h1 style="text-align: center;">Seller Signup</h1>
-<form (ngSubmit)="signupSeller(seller.value)" #seller="ngForm">
+
+<form (ngSubmit)="signupSeller(sellerSignup.value)" #sellerSignup="ngForm">
     <div class="mb-3 mt-3">
       <label for="name" class="form-label">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required ngModel #name="ngModel">
@@ -22,14 +23,15 @@
       <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Password" name="comfirmpassword" required ngModel #confirmpassword="ngModel" appSellerPasswordValidation="password">
       <p *ngIf="confirmpassword.touched && confirmpassword.errors?.['notEqual']">Passwords are not Matching</p>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!seller.valid">SignUp</button>
-    <p><a (click)="signup()" style="cursor:pointer; color:blue;">Already Signed In? Then Navigate To Login</a></p>
+    <button type="submit" class="btn btn-primary" [disabled]="!sellerSignup.valid">SignUp</button>
+    <p><a (click)="signup()">Already Signed In? Then Navigate To Login</a></p>
   </form>
 </div>
 
 <div class="login" *ngIf="!signIn">
 <h1 style="text-align: center;">Seller Login</h1>
-<form (ngSubmit)="signupLogin(seller.value)" #seller="ngForm">
+<p style="text-align:center;color:red">{{messagefailed}}</p>
+<form (ngSubmit)="signupLogin(sellerLogin.value)" #sellerLogin="ngForm">
     <div class="mb-3 mt-2">
       <label for="email" class="form-label">Email:</label>
       <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required ngModel #email="ngModel">
@@ -40,7 +42,7 @@
       <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required ngModel #password="ngModel">
       <p *ngIf="password.errors?.['required'] && password.touched">password field is required</p>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!seller.valid">Login</button>
-    <p><a (click)="login()" style="cursor:pointer; color:blue;">New User? first signup</a></p>
+    <button type="submit" class="btn btn-primary" [disabled]="!sellerLogin.valid">Login</button>
+    <p><a (click)="login()">New User? first signup</a></p>
   </form>
 </div>

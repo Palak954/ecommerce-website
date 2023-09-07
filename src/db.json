@@ -6,13 +6,27 @@
       "password": "munmun@1234",
       "comfirmpassword": "munmun@1234",
       "id": 1
-    }
-  ],
-  "login": [
+    },
     {
+      "name": "Munmun",
       "email": "munmun@gmail.com",
-      "password": "munmun",
-      "id": 1
+      "password": "munmun12345",
+      "comfirmpassword": "munmun12345",
+      "id": 2
+    },
+    {
+      "name": "palak",
+      "email": "palakgoel46321@gmail.com",
+      "password": "p12345",
+      "comfirmpassword": "p12345",
+      "id": 3
+    },
+    {
+      "name": "priya kapoor",
+      "email": "priyakapoor@gmail.com",
+      "password": "p123456",
+      "comfirmpassword": "p123456",
+      "id": 4
     }
   ]
 }

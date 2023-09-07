@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupService } from '../services/sellersignup.service';
-
 import { Router } from '@angular/router';
 
 @Component({

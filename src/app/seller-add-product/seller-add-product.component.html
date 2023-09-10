@@ -1,0 +1,31 @@
+<div class="product">
+    <h1 style="text-align: center;">Add Product</h1>
+    <p>{{productMessage}}</p>
+    <form (ngSubmit)="adProducts(products.value)" #products="ngForm">
+        <div class="mb-3 mt-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required ngModel [(ngModel)]="product.name">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" required ngModel [(ngModel)]="product.description">
+        </div>
+        <div class="mb-3">
+            <label for="color" class="form-label">Color:</label>
+            <input type="string" class="form-control" id="color" placeholder="Enter color" name="color" required ngModel [(ngModel)]="product.color">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" class="form-control" id="price" placeholder="Enter price" name="price" required ngModel [(ngModel)]="product.price">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image:</label>
+            <input type="text" class="form-control" id="image" placeholder="Enter image url" name="image" required ngModel [(ngModel)]="product.image">
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <input type="text" class="form-control" id="category" placeholder="Enter category" name="category" required ngModel [(ngModel)]="product.category">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Add Product">
+    </form>
+</div>

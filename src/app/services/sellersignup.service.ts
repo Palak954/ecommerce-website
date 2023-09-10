@@ -11,11 +11,12 @@ export class SignupService {
   constructor(private http : HttpClient , private route : Router) { }
   isLoggedIn = new BehaviorSubject<boolean>(false);
   postsignup(data : signup){
-    this.http.post('http://localhost:8000/seller', data).subscribe((data)=>{
+    this.http.post('http://localhost:8000/seller', data , {'observe' : 'response'}).subscribe((result)=>{
       this.isLoggedIn.next(true);
-      localStorage.setItem("seller" , JSON.stringify(data));
-      console.log("Data",data);
-      this.route.navigate(["/seller-home"]);
+      console.log(result);
+      if(result){
+      localStorage.setItem("seller" , JSON.stringify(result.body));
+      this.route.navigate(["/seller-home"]) }
     });
   }
   reloadSeller(){

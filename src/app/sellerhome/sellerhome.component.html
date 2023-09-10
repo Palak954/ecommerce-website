@@ -1,1 +1,30 @@
-<p>sellerhome works!</p>
+<div class="products">
+  <h1>Display Products</h1>
+  <table border="1px solid black">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>COLOR</th>
+        <th>PRICE</th>
+        <th>IMAGE</th>
+        <th>CATEGORY</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let products of Productdata">
+        <td>{{products.name}}</td>
+        <td>{{products.description}}</td>
+        <td>{{products.color}}</td>
+        <td>{{products.price}}</td>
+        <td><img src="{{products.image}}" height="80px" width="80px"></td>
+        <td>{{products.category}}</td>
+        <td>
+          <fa-icon [icon]="icon"></fa-icon>&nbsp;
+          <button class="btn btn-danger" (click)="delete(products.id)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

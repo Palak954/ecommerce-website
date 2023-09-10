@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    
+    margin-left: 100px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }

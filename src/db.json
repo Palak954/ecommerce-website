@@ -1,39 +1,38 @@
 {
   "seller": [
     {
-      "name": "Munmun",
-      "email": "munmun@gmail.com",
-      "password": "munmun@1234",
-      "comfirmpassword": "munmun@1234",
+      "name": "palak",
+      "email": "palakgoel46321@gmail.com",
+      "password": "p@12345",
+      "comfirmpassword": "p@12345",
       "id": 1
     },
     {
-      "name": "Munmun",
-      "email": "munmun@gmail.com",
-      "password": "munmun12345",
-      "comfirmpassword": "munmun12345",
+      "name": "Shalini",
+      "email": "Shalini@gmail.com",
+      "password": "s@12345",
+      "comfirmpassword": "s@12345",
       "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Samsung s20",
+      "description": "best camera quality and display",
+      "color": "blue",
+      "price": 60000,
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQkcMVk1K9R9gQu3F-mSWCGIgOICKL2IGESXaPUhAlnHwX8cknNUWDL9Tw6woSpN2vs3GluXLfOWA&usqp=CAc",
+      "category": "Mobile",
+      "id": 1
     },
     {
-      "name": "palak",
-      "email": "palakgoel46321@gmail.com",
-      "password": "p12345",
-      "comfirmpassword": "p12345",
-      "id": 3
-    },
-    {
-      "name": "priya kapoor",
-      "email": "priyakapoor@gmail.com",
-      "password": "p123456",
-      "comfirmpassword": "p123456",
-      "id": 4
-    },
-    {
-      "name": "palak",
-      "email": "palakgoel46321@gmail.com",
-      "password": "p123456",
-      "comfirmpassword": "p123456",
-      "id": 5
+      "name": "Iphone 14",
+      "description": "Good Display And Features",
+      "color": "Grey",
+      "price": 80000,
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "category": "mobile",
+      "id": 2
     }
   ]
 }

@@ -10,9 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
-import { SellerPasswordValidationDirective } from './directive/seller-password-validation.directive'
+import { SellerPasswordValidationDirective } from './directive/seller-password-validation.directive';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,15 +23,15 @@ import { SellerPasswordValidationDirective } from './directive/seller-password-v
     SellerAuthComponent,
     PageNotFoundComponent,
     SellerhomeComponent,
-    SellerPasswordValidationDirective
-  ],
+    SellerPasswordValidationDirective,
+    SellerAddProductComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule , 
+    AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    FormsModule , 
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

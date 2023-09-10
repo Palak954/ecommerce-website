@@ -15,7 +15,7 @@ export class LoginService {
     this.http.get(`http://localhost:8000/seller?email=${data.email}&password=${data.password}` , {observe : 'response'}).subscribe((result:any)=>{
       console.log(result);
       if(result && result.body && result.body.length){
-        localStorage.setItem("seller" , JSON.stringify(result));
+        localStorage.setItem("seller" , JSON.stringify(result.body));
         this.route.navigate(["/seller-home"]);
       }
       else{

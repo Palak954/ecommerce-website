@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 import { SellerPasswordValidationDirective } from './directive/seller-password-validation.directive';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
-
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,9 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     PageNotFoundComponent,
     SellerhomeComponent,
     SellerPasswordValidationDirective,
-    SellerAddProductComponent],
+    SellerAddProductComponent,
+    SellerUpdateProductComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,7 +35,8 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     MatButtonModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule , 
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

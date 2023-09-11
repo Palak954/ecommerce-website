@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/products';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faTrash , faEdit } from '@fortawesome/free-solid-svg-icons';
 import { ProductsService } from '../services/products.service';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class SellerhomeComponent implements OnInit {
   constructor(private productsService : ProductsService , private route : Router) { }
   Productdata : Products[];
-  icon = faCoffee;
+  editicon = faEdit;
+  deleteicon = faTrash;
   ngOnInit(): void {
     this.productList();
   }
@@ -31,7 +32,6 @@ export class SellerhomeComponent implements OnInit {
     })
   }
   update(id:string){
-    this.route.navigate(["seller-add-product/"+id]);
+    this.route.navigate(["seller-update-product/"+id]);
   }
-
 }

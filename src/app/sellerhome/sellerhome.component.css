@@ -18,3 +18,9 @@ table {
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
   }
+.icons{
+  font-size: 40px;
+  margin: 2px;
+  
+  cursor: pointer;
+}

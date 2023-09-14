@@ -16,6 +16,9 @@ import { SellerPasswordValidationDirective } from './directive/seller-password-v
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     SellerhomeComponent,
     SellerPasswordValidationDirective,
     SellerAddProductComponent,
-    SellerUpdateProductComponent
+    SellerUpdateProductComponent,
+    ProductDetailsComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,8 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule , 
-    FontAwesomeModule
+    FontAwesomeModule , 
+    NgbCarouselModule, NgbModule , 
   ],
   providers: [],
   bootstrap: [AppComponent]

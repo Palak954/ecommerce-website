@@ -7,6 +7,7 @@ import { Products } from 'src/products';
   providedIn: 'root'
 })
 export class ProductsService {
+  count : number = 0;
   constructor(private http : HttpClient) { }
   postProduct(data : Products){
     return this.http.post("http://localhost:8000/products" , data)
@@ -19,5 +20,11 @@ export class ProductsService {
   }
   putProduct(data:Products , id:string){
     return this.http.put<Products>(`http://localhost:8000/products/${id}` , data);
+  }
+  popularProducts(){
+    return this.http.get<Products[]>("http://localhost:8000/products?_limit=4");
+  }
+  searchProducts(data : string){
+    return this.http.get(`http://localhost:8000/products?q=${data}`);
   }
 }

@@ -1,0 +1,19 @@
+img{
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    left: 340px;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+.details{
+    margin-top: 40px;
+    margin-left: 80px;
+}
+.details h2{
+    color: blue;
+    font-size: 26px;
+}
+.details p{
+    font-size: 16px;
+}

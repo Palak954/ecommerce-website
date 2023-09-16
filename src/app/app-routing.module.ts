@@ -9,6 +9,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 const routes: Routes = [
   {path:"" , component:HomeComponent} , 
   {path:"seller-auth" , component:SellerAuthComponent} , 
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:"seller-update-product/:id" , component:SellerUpdateProductComponent , canActivate:[AuthGuard]} , 
   {path:"product-details" , component:ProductDetailsComponent} , 
   {path:"search/:query" , component:SearchComponent} , 
+  {path:"product-details/:id" , component:ProductDetailsComponent} , 
+  {path:"user-auth" , component:UserAuthComponent} , 
   {path:"**" , component:PageNotFoundComponent}
 ];
 

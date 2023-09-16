@@ -1,10 +1,10 @@
 import { Component, OnInit , ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SignupService } from '../services/sellersignup.service';
-import { signup } from 'src/signup';
+import { signup } from 'src/Signup';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/sellerlogin.service';
-import { Login } from '../../login';
+import { Login } from '../../Login';
 
 @Component({
   selector: 'app-seller-auth',

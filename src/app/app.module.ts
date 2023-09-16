@@ -19,6 +19,7 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { SearchComponent } from './search/search.component';
     SellerUpdateProductComponent,
     ProductDetailsComponent,
     SearchComponent,
+    UserAuthComponent,
   ],
   imports: [
     BrowserModule,

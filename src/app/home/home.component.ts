@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Products } from 'src/products';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,9 +9,9 @@ import { Products } from 'src/products';
 })
 export class HomeComponent implements OnInit {
   popularProducts : Products[];
-  count = this.productsService.count;
+  cartItem = this.productsService.cartItem;
   alProducts : Products[];
-  constructor(private productsService : ProductsService){}
+  constructor(private productsService : ProductsService , private route : Router){}
   ngOnInit(): void {
     this.productsService.popularProducts().subscribe((data)=>{
       this.popularProducts = data;
@@ -21,7 +22,9 @@ export class HomeComponent implements OnInit {
     });
   }
   addToCart(){
-    this.count++;
+    this.cartItem = this.cartItem+1;
   }
-
+  openProduct(id:string){
+    this.route.navigate(["product-details/"+id]);
+  }
 }

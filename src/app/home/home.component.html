@@ -1,7 +1,7 @@
 <ngb-carousel *ngIf="popularProducts">
 	<ng-template *ngFor="let popularproducts of popularProducts" ngbSlide>
 		<div class="picsum-img-wrapper">
-			<img class="product_header_img" [src]="popularproducts.image" alt="Random first slide" />
+			<img class="product_header_img" [src]="popularproducts.image" alt="Random first slide" (click)="openProduct(popularproducts.id)">
 		</div>
 		<div class="carousel-caption">
 			<h3>{{popularproducts.name}}</h3>
@@ -17,16 +17,16 @@
     <div class="col-sm-3" *ngFor = "let product of alProducts">
       <div class="card" style="width: 18rem;">
           <div class="card-body" style="text-align:center">
-			<img [src]="product.image" alt="" height="220px" width="120px">
+			<img [src]="product.image" alt="" height="220px" width="120px" (click)="openProduct(product.id)">
 			<hr>
 			<div class="content">
             <h2 class="card-title">{{product.name}}</h2>
-            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">{{product.color}}</p>
             <p class="card-text">{{product.price | currency:'INR'}}</p>
 			</div>
 			<hr>
 			<div class="links">
-			<a routerLink="product-details">View Details</a>
+			<a routerLink="product-details/{{product.id}}">View Details</a>
 			<a (click)="addToCart()" href="#">Add To Cart</a>
 			</div>
         </div>

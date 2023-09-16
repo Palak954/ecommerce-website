@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 
-import { Login } from '../../login';
+import { Login } from '../../Login';
 import { SignupService } from './sellersignup.service';
 import { Router } from '@angular/router';
 

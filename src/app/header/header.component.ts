@@ -10,7 +10,7 @@ import { Products } from 'src/products';
 })
 export class HeaderComponent implements OnInit {
   menutype : string = "default";
-  count : number = this.productService.count;
+  cartItem : number = this.productService.cartItem;
   sellerName : string = "";
   searchProduct : Products[];
   constructor(private route : Router , private productService :ProductsService) { }
@@ -51,5 +51,8 @@ export class HeaderComponent implements OnInit {
   search(data:string){
     console.log(data);
     this.route.navigate([`search/${data}`])
+  }
+  selectItem(id : string){
+    this.route.navigate(["/product-details/"+id]);
   }
 }

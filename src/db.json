@@ -19,7 +19,7 @@
     {
       "name": "WhiteTop",
       "description": "Women's Fashion V-Neck Top",
-      "color": "white",
+      "color": "sandybrown",
       "price": 499,
       "image": "https://m.media-amazon.com/images/I/61NzGy+D0gL._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
@@ -60,6 +60,22 @@
       "image": "https://m.media-amazon.com/images/I/713wEcCIKRL._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
       "id": 14
+    }
+  ],
+  "user": [
+    {
+      "name": "Shalini",
+      "email": "Shalini@gmail.com",
+      "password": "s@12345",
+      "comfirmpassword": "s@12345",
+      "id": 1
+    },
+    {
+      "name": "palak",
+      "email": "palakgoel46321@gmail.com",
+      "password": "p@12345",
+      "comfirmpassword": "p@12345",
+      "id": 2
     }
   ]
 }

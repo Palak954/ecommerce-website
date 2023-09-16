@@ -1,1 +1,26 @@
-<p>product-details works!</p>
+<div class="row container" *ngIf="product">
+    <div class="col-sm-6">
+        <img [src]="product.image" alt="image">
+    </div>
+
+    <div class="col-sm-6">
+    <div class="details">
+        <h1>{{product.name}}</h1>
+        <h2>Price:{{product.price}}</h2>
+        <div>
+            Color:
+            <h2 [style.backgroundColor]="product.color" class="product-color"></h2>
+        </div>
+        <h2>Category : {{product.category}}</h2>
+        <h2>Description : {{product.description}}</h2>
+        <button class="btn btn-success" (click)="adCart()">Add To Cart</button>
+        <button class="btn btn-success">Buy Now</button>
+        <div class="quantity-group">
+            <button (click)="increment()">+</button>
+            <input type="number" value={{count}}>
+            <button (click)="decrement()">-</button>
+        </div>
+    </div>
+
+</div>
+</div>

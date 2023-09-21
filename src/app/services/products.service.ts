@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable , EventEmitter} from '@angular/core';
 
 import { Products } from 'src/products';
 
@@ -7,8 +7,8 @@ import { Products } from 'src/products';
   providedIn: 'root'
 })
 export class ProductsService {
-  cartItem : number = 0;
   constructor(private http : HttpClient) { }
+  cartData = new EventEmitter<Products[]>();
   postProduct(data : Products){
     return this.http.post("http://localhost:8000/products" , data)
   }
@@ -29,5 +29,18 @@ export class ProductsService {
   }
   fetchProduct(id:string){
     return this.http.get<Products>(`http://localhost:8000/products/${id}`);
+  }
+  cartItem(data : Products){
+   let productdata = [];
+   let localcart = localStorage.getItem('localcart');
+   if(!localcart){
+    localStorage.setItem('localcart' , JSON.stringify([data]));
+   }
+   else{
+    productdata = JSON.parse(localcart);
+    productdata.push(data);
+    localStorage.setItem('localcart',JSON.stringify(productdata));
+   }
+   this.cartData.emit(productdata);
   }
 }

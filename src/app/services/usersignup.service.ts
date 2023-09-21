@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { signup } from 'src/Signup';
 
 @Injectable({
@@ -7,12 +8,17 @@ import { signup } from 'src/Signup';
 })
 export class UsersignupService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient , private route : Router) { }
   postSignup(data : signup){
-    this.http.post("http://localhost:8000/user" , data).subscribe((result)=>{
+    this.http.post("http://localhost:8000/user" , data , {observe:'response'}).subscribe((result)=>{
       if(result)
-      localStorage.setItem("user" , JSON.stringify(result));
-      console.log(result);
+      localStorage.setItem("user" , JSON.stringify(result.body));
+      // console.log(result);
+      this.route.navigate(["/"]);
     });
+  }
+  reloaduser(){
+    if(localStorage.getItem("user"))
+    this.route.navigate(["/"]);
   }
 }

@@ -29,6 +29,7 @@
     
     <div class="login" *ngIf="!signIn">
     <h1 style="text-align: center;">User Login</h1>
+    <p style="text-align:center;color:red;">{{message}}</p>
     <form (ngSubmit)="signupLogin(userLogin.value)" #userLogin="ngForm">
         <div class="mb-3 mt-2">
           <label for="email" class="form-label">Email:</label>

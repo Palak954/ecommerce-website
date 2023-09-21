@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   popularProducts : Products[];
-  cartItem = this.productsService.cartItem;
   alProducts : Products[];
   constructor(private productsService : ProductsService , private route : Router){}
   ngOnInit(): void {
@@ -20,9 +19,6 @@ export class HomeComponent implements OnInit {
     this.productsService.getProduct().subscribe((data)=>{
       this.alProducts = data;
     });
-  }
-  addToCart(){
-    this.cartItem = this.cartItem+1;
   }
   openProduct(id:string){
     this.route.navigate(["product-details/"+id]);

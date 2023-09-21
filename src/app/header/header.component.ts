@@ -10,9 +10,10 @@ import { Products } from 'src/products';
 })
 export class HeaderComponent implements OnInit {
   menutype : string = "default";
-  cartItem : number = this.productService.cartItem;
   sellerName : string = "";
+  userName : string = "";
   searchProduct : Products[];
+  cartItem : number=0;
   constructor(private route : Router , private productService :ProductsService) { }
   ngOnInit(): void {
     this.route.events.subscribe((data:any)=>{
@@ -26,14 +27,31 @@ export class HeaderComponent implements OnInit {
       else
       this.sellerName = sellerdata.name;
       }
-      else
-      this.menutype = "default";
+      else if(localStorage.getItem("user")){
+      let userstore = localStorage.getItem("user");
+      let userdata = JSON.parse(userstore);
+      this.userName = userdata.name;
+      this.menutype = "user";
       }
-    })
+      else
+      this.menutype="default";
+      }
+  })
+  let cartData = localStorage.getItem('localcart');
+  if (cartData != null ){
+    this.cartItem  =JSON.parse(cartData).length ;
   }
-  logout(){
+  this.productService.cartData.subscribe((data)=>{
+    this.cartItem = data.length;
+  })
+  }
+  logoutseller(){
     localStorage.removeItem("seller");
     this.route.navigate(["/"]);
+  }
+  logoutuser(){
+    localStorage.removeItem("user");
+    this.route.navigate(["user-auth"]);
   }
   searchProducts(query : KeyboardEvent){
     if(query){
@@ -42,7 +60,6 @@ export class HeaderComponent implements OnInit {
         this.searchProduct = data;
       })
     }
-
   }
 
   disablelist(){

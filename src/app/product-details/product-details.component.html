@@ -13,7 +13,8 @@
         </div>
         <h2>Category : {{product.category}}</h2>
         <h2>Description : {{product.description}}</h2>
-        <button class="btn btn-success" (click)="adCart()">Add To Cart</button>
+        <button class="btn btn-success" *ngIf="!removeItem" (click)="AdTocart()">Add To Cart</button>
+        <button class="btn btn-success" *ngIf="removeItem" (click)="AdTocart()">Remove From Cart</button>
         <button class="btn btn-success">Buy Now</button>
         <div class="quantity-group">
             <button (click)="increment()">+</button>

@@ -13,13 +13,19 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private activatedRoute : ActivatedRoute , private productService : ProductsService) { }
   productId : string;
   product : Products;
+
   count : number = 1;
-  cartItem = this.productService.cartItem;
+  removeItem : boolean = false;
   ngOnInit(): void {
     this.productId = this.activatedRoute.snapshot.paramMap.get("id");
     this.productService.fetchProduct(this.productId).subscribe((data)=>{
       this.product = data;
     })
+    let cartData = localStorage.getItem('localcart');
+    if(cartData && this.productId)
+    this.removeItem = true;
+    else
+    this.removeItem = false;
   }
   increment(){
     if(this.count < 20)
@@ -29,7 +35,13 @@ export class ProductDetailsComponent implements OnInit {
     if(this.count > 1)
     this.count = this.count-1;
   }
-  adCart(){
-    this.cartItem = this.cartItem+1;
+  AdTocart(){
+    if(this.product){
+      this.product.quantity = this.count;
+      if(!localStorage.getItem("user")){
+        this.productService.cartItem(this.product);
+      }
+    }
+
   }
 }

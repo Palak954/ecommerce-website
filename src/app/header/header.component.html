@@ -54,7 +54,7 @@
 <nav class="nav navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <h1><a routerLink="" class="navbar-brand title">E-Comm</a> </h1>
-  <div *ngIf="menutype!=='seller'" class="nav-search">
+  <div *ngIf="menutype == 'user' || menutype == 'default' " class="nav-search">
     <input type="text" (keyup)="searchProducts($event)" (blur)="disablelist()" placeholder="Search Products" #searchfield>
     <button (click)="search(searchfield.value)">Search</button>
     <ul class="suggested-search" *ngIf="searchProduct">
@@ -70,10 +70,17 @@
     <li><a routerLink="user-auth">Login</a></li>
     <li><a href="#">Cart({{cartItem}})</a></li>
   </ul>
+  <ul *ngSwitchCase="'user'" >
+    <li><a routerLink="seller-auth">Seller</a></li>
+    <li><a routerLink="">Home</a></li>
+    <li><a>{{userName}}</a></li>
+    <li><a (click)="logoutuser()">Logout</a></li>
+    <li><a href="#">Cart({{cartItem}})</a></li>
+  </ul>
   <ul *ngSwitchCase="'seller'" >
     <li><a routerLink="seller-add-product">Add Product</a></li>
     <li><a routerLink="seller-home">List</a></li>
-    <li><a (click)="logout()">Logout</a></li>
+    <li><a (click)="logoutseller()">Logout</a></li>
     <li><a href="#">{{sellerName | titlecase}}</a></li>
     </ul>
     </div>

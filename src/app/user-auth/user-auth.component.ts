@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Login } from 'src/Login';
 import { signup } from 'src/Signup';
 import { UsersignupService } from '../services/usersignup.service';
+import { UserloginService } from '../services/userlogin.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -11,16 +12,20 @@ import { UsersignupService } from '../services/usersignup.service';
 })
 export class UserAuthComponent implements OnInit {
   signIn : boolean = true;
-  constructor(private route : Router , private userService : UsersignupService) { }
-
+  message : string = "";
+  constructor(private route : Router , private userService : UsersignupService , private userLogin : UserloginService) { }
   ngOnInit(): void {
+    this.userService.reloaduser();
   }
   signupLogin(value : Login){
-    console.log(value);
+    this.userLogin.Loginuser(value);
+    this.userLogin.message.subscribe((data)=>{
+      if(data)
+      this.message = "login failed";
+    })
   }
   signupUser(value : signup){
     this.userService.postSignup(value);
-    this.route.navigate(["/"]);
   }
   signup(){
     this.signIn = false;

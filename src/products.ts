@@ -5,5 +5,6 @@ export class Products{
     price : number ; 
     color : string ; 
     category : string ; 
-    id?:string;
+    id:string;
+    quantity: number;
 }

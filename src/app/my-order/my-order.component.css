@@ -1,0 +1,30 @@
+.my-orders{
+    margin-left: 132px;
+    margin-right: 132px;
+
+    margin-bottom: 18px;
+}
+.my-orders h1{
+    text-align: center;
+    color : blue;
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+img{
+    background-color: lightgray;
+    padding: 8px;
+}
+.order-header{
+    font-size: 22px;
+    margin-bottom: 14px;
+
+    color: blue;
+}
+.order-data{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}

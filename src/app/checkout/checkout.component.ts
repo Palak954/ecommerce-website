@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProductsService } from '../services/products.service';
 import { Order } from 'src/order';
-
+import { Router } from '@angular/router';
+import { Cart } from 'src/cart';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -10,11 +11,14 @@ import { Order } from 'src/order';
 })
 export class CheckoutComponent implements OnInit {
   totalPrice : number;
-  constructor(private productService : ProductsService) { }
+  cartData : Cart[];
+  message : string;
+  constructor(private productService : ProductsService , private route : Router) { }
 
   ngOnInit(): void {
       this.productService.getCartItems().subscribe((result)=>{
       let price = 0;
+      this.cartData = result;
       result
       .forEach((product)=>{
         price = price + (product.price*product.quantity);
@@ -32,10 +36,23 @@ export class CheckoutComponent implements OnInit {
       let orderdata : Order = {
         ...data , 
         totalPrice : this.totalPrice , 
-        userId
+        userId , 
+        id : undefined
       }
+      this.cartData.forEach((item)=>{
+        setTimeout(()=>{
+        item.id && this.productService.deleteCartItems(item.id);
+        } , 1000);
+      })
       this.productService.orderNow(orderdata).subscribe((result)=>{
-        console.log(result);
+        if(result){
+          this.message = "Order has been Placed";
+          setTimeout(()=>{
+            this.message = undefined;
+          } , 4000);
+          alert("Order Placed");
+          this.route.navigate(["my-orders"])
+        }
       })
     }
 

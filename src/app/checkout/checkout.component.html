@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-sm-6">
             <h2 class="address">Add Shipping Address</h2>
+            <p class="message-p">{{message}}</p>
             <form (ngSubmit)="checkoutform(checkout.value)" #checkout="ngForm">
                 <div class="inputfields">
                 <input type="email" placeholder="Enter User Email" name="email" ngModel>

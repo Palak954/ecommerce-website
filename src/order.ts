@@ -4,4 +4,5 @@ export class Order{
     phone : number;
     totalPrice : number;
     userId : number;
+    id : number;
 }

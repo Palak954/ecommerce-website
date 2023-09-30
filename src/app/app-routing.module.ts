@@ -12,8 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 const routes: Routes = [
-  {path:"" , component:HomeComponent} , 
+  {path:"home" , component:HomeComponent} , 
   {path:"seller-auth" , component:SellerAuthComponent} , 
   {path:"seller-home" , component:SellerhomeComponent , canActivate:[AuthGuard]} , 
   {path:"seller-add-product" , component:SellerAddProductComponent , canActivate:[AuthGuard]} , 
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"user-auth" , component:UserAuthComponent} , 
   {path:"cart-page" , component:CartPageComponent} , 
   {path:"checkout" , component:CheckoutComponent} , 
+  {path:"my-orders" , component:MyOrderComponent} , 
   {path:"**" , component:PageNotFoundComponent}
 ];
 

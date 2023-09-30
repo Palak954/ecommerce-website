@@ -80,4 +80,17 @@ export class ProductsService {
     orderNow(data : Order){
       return this.http.post("http://localhost:8000/order" , data);
     }
+    orderList(){
+      let user = localStorage.getItem("user");
+      let userId = user && JSON.parse(user).id;
+      return this.http.get<Order[]>("http://localhost:8000/order?userId="+userId);
+    }
+    deleteCartItems(cartId : number){
+      return this.http.delete(`http://localhost:8000/cart/`+ cartId).subscribe((result)=>{
+        this.cartData.emit([]);
+      });
+    }
+    removeOrder(id : number){
+      return this.http.delete("http://localhost:8000/order/"+id);
+    }
   }

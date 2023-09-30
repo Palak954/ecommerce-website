@@ -114,28 +114,28 @@
   ],
   "cart": [
     {
-      "name": "YellowCropTop",
-      "description": "Women's Crop Top",
-      "color": "yellow",
-      "price": 399,
-      "image": "https://m.media-amazon.com/images/I/510GJDcn4dL._AC_UL480_FMwebp_QL65_.jpg",
+      "name": "BlackTop",
+      "description": "Solid Ribbed Round Neck Collarless Sleeveless",
+      "color": "black",
+      "price": 369,
+      "image": "https://m.media-amazon.com/images/I/81iu8ggS43L._UY741_.jpg",
       "category": "Top",
       "quantity": 1,
-      "userId": 1,
-      "productId": 3,
-      "id": 18
+      "userId": 3,
+      "productId": 8,
+      "id": 3
     },
     {
-      "name": "RedCropTop",
-      "description": "Regular Casual Stylish Wear Top for Women's",
-      "color": "red",
-      "price": 399,
-      "image": "https://m.media-amazon.com/images/I/416m6N0Ru6L._AC_UL480_FMwebp_QL65_.jpg",
+      "name": "GreenCropTop",
+      "description": "V Neck Stylish Full Sleeve Casual Wear",
+      "color": "green",
+      "price": 387,
+      "image": "https://m.media-amazon.com/images/I/71OJVW2KNmL._UX679_.jpg",
       "category": "Top",
       "quantity": 1,
-      "userId": 1,
-      "productId": 2,
-      "id": 19
+      "userId": 3,
+      "productId": 7,
+      "id": 4
     },
     {
       "name": "WhiteTop",
@@ -145,57 +145,9 @@
       "image": "https://m.media-amazon.com/images/I/61NzGy+D0gL._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
       "quantity": 1,
-      "userId": 1,
+      "userId": 2,
       "productId": 1,
-      "id": 20
-    },
-    {
-      "name": "BlueTop",
-      "description": "Printed Cotton Top for Women",
-      "color": "black",
-      "price": 599,
-      "image": "https://m.media-amazon.com/images/I/61y5CGTj-XL._AC_UL480_FMwebp_QL65_.jpg",
-      "category": "Top",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 4,
-      "id": 21
-    },
-    {
-      "name": "MarronTop",
-      "description": "Maroon Three Quarter Sleeves Solid Slim Fit",
-      "color": "maroon",
-      "price": 1499,
-      "image": "https://m.media-amazon.com/images/I/61wRptbEfnL._UY741_.jpg",
-      "category": "Top",
-      "quantity": 4,
-      "userId": 1,
-      "productId": 6,
-      "id": 22
-    },
-    {
-      "name": "BlueLongFlapperTop",
-      "description": "Women's Floral Printed Cotton Top",
-      "color": "blue",
-      "price": 499,
-      "image": "https://m.media-amazon.com/images/I/713wEcCIKRL._AC_UL480_FMwebp_QL65_.jpg",
-      "category": "Top",
-      "quantity": 4,
-      "userId": 1,
-      "productId": 5,
-      "id": 23
-    },
-    {
-      "name": "WhiteTop",
-      "description": "Women's Fashion V-Neck Top",
-      "color": "sandybrown",
-      "price": 499,
-      "image": "https://m.media-amazon.com/images/I/61NzGy+D0gL._AC_UL480_FMwebp_QL65_.jpg",
-      "category": "Top",
-      "quantity": 1,
-      "userId": 3,
-      "productId": 1,
-      "id": 24
+      "id": 5
     },
     {
       "name": "RedCropTop",
@@ -205,9 +157,9 @@
       "image": "https://m.media-amazon.com/images/I/416m6N0Ru6L._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
       "quantity": 1,
-      "userId": 3,
+      "userId": 2,
       "productId": 2,
-      "id": 25
+      "id": 6
     },
     {
       "name": "YellowCropTop",
@@ -216,10 +168,10 @@
       "price": 399,
       "image": "https://m.media-amazon.com/images/I/510GJDcn4dL._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
-      "quantity": 2,
-      "userId": 3,
+      "quantity": 1,
+      "userId": 2,
       "productId": 3,
-      "id": 26
+      "id": 7
     },
     {
       "name": "BlueTop",
@@ -229,33 +181,9 @@
       "image": "https://m.media-amazon.com/images/I/61y5CGTj-XL._AC_UL480_FMwebp_QL65_.jpg",
       "category": "Top",
       "quantity": 1,
-      "userId": 3,
+      "userId": 2,
       "productId": 4,
-      "id": 27
-    },
-    {
-      "name": "BlueLongFlapperTop",
-      "description": "Women's Floral Printed Cotton Top",
-      "color": "blue",
-      "price": 499,
-      "image": "https://m.media-amazon.com/images/I/713wEcCIKRL._AC_UL480_FMwebp_QL65_.jpg",
-      "category": "Top",
-      "quantity": 1,
-      "userId": 3,
-      "productId": 5,
-      "id": 28
-    },
-    {
-      "name": "MarronTop",
-      "description": "Maroon Three Quarter Sleeves Solid Slim Fit",
-      "color": "maroon",
-      "price": 1499,
-      "image": "https://m.media-amazon.com/images/I/61wRptbEfnL._UY741_.jpg",
-      "category": "Top",
-      "quantity": 2,
-      "userId": 3,
-      "productId": 6,
-      "id": 29
+      "id": 8
     }
   ],
   "order": [
@@ -266,6 +194,14 @@
       "totalPrice": 5892,
       "userId": 3,
       "id": 1
+    },
+    {
+      "email": "munmun@gmail.com",
+      "address": "101,Arya Nagar",
+      "contact": 7505910308,
+      "totalPrice": 3393,
+      "userId": 3,
+      "id": 2
     }
   ]
 }

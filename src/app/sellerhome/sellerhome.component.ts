@@ -18,7 +18,7 @@ export class SellerhomeComponent implements OnInit {
     this.productList();
   }
 
-  delete(id:string){
+  delete(id:number){
     this.productsService.deleteProduct(id).subscribe((data)=>{
       console.log(data);
     });
@@ -31,7 +31,7 @@ export class SellerhomeComponent implements OnInit {
       console.log(this.Productdata);
     })
   }
-  update(id:string){
+  update(id:number){
     this.route.navigate(["seller-update-product/"+id]);
   }
 }

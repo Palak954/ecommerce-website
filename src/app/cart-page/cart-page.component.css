@@ -1,0 +1,49 @@
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 32px;
+    margin-bottom: 10px;
+}
+.h1{
+    text-align: center;
+    font-size: 32px;
+    color: blue;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-left: -280px;
+}
+button{
+    height: 40px;
+}
+img{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 110px; 
+}
+.summary-details{
+    border: 1px solid black;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
+}
+.col-sm-8{
+    border: 1px solid black;
+}
+.h2{
+    text-align: center;
+    font-size: 32px;
+    color: blue;
+    font-weight: 800;
+}
+.summary-details p , h2{
+    display: flex;
+    justify-content: space-between;
+}
+.checkout{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-left: 2px;
+}

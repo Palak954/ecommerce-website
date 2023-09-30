@@ -14,13 +14,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.productsService.popularProducts().subscribe((data)=>{
       this.popularProducts = data;
-      console.log(this.popularProducts);
+      // console.log(this.popularProducts);
     });
     this.productsService.getProduct().subscribe((data)=>{
       this.alProducts = data;
     });
   }
-  openProduct(id:string){
+  openProduct(id:number){
     this.route.navigate(["product-details/"+id]);
   }
 }

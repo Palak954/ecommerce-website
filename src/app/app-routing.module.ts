@@ -10,6 +10,8 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 const routes: Routes = [
   {path:"" , component:HomeComponent} , 
   {path:"seller-auth" , component:SellerAuthComponent} , 
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path:"search/:query" , component:SearchComponent} , 
   {path:"product-details/:id" , component:ProductDetailsComponent} , 
   {path:"user-auth" , component:UserAuthComponent} , 
+  {path:"cart-page" , component:CartPageComponent} , 
+  {path:"checkout" , component:CheckoutComponent} , 
   {path:"**" , component:PageNotFoundComponent}
 ];
 

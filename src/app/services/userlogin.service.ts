@@ -14,6 +14,7 @@ export class UserloginService {
       if(data && data.body && data.body.length){
         localStorage.setItem("user" , JSON.stringify(data.body[0]));
         this.route.navigate(["/"]);
+        this.message.emit(false);
       }
       else{
         alert("login failed");

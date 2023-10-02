@@ -49,8 +49,7 @@ export class CheckoutComponent implements OnInit {
           this.message = "Order has been Placed";
           setTimeout(()=>{
             this.message = undefined;
-          } , 4000);
-          alert("Order Placed");
+          } , 400);
           this.route.navigate(["my-orders"])
         }
       })
